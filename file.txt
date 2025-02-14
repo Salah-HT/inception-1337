@@ -1,0 +1,18 @@
+
+DOMAIN_NAME=shamsate.42.fr
+CERT_=./requirements/tools/shamsate.42.fr.crt
+KEY_=./requirements/tools/shamsate.42.fr.key
+DB_NAME=wordpress
+DB_ROOT=rootpass
+DB_USER=wpuser
+DB_PASS=wppass
+FTP_USR=ftpuser
+FTP_PWD=ftppass
+DB_USER=wpuser
+DB_PASS=wppass
+
+
+
+sudo mount -t vboxsf wd ~/share/
+
+docker stop $(docker ps -qa); docker rm $(docker ps -qa); docker rmi -f $(docker images -qa); docker volume rm $(docker volume ls -q); docker network rm $(docker network ls -q) 2>/dev/null

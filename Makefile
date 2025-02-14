@@ -1,4 +1,5 @@
-name	= inception
+name = inception
+
 all:
 	@printf "Launch configuration ${name}...\n"
 	@bash srcs/requirements/wordpress/tools/make_dir.sh
@@ -32,4 +33,4 @@ fclean:
 	@sudo rm -rf ~/data/wordpress/*
 	@sudo rm -rf ~/data/mariadb/*
 
-.PHONY	: all build down re clean fclean
+.PHONY: all build down re clean fclean

@@ -101,19 +101,6 @@ services:
     ports:
       - "80:80"
     restart: always
-
-  portainer:
-    image: portainer/portainer-ce:2.11.1  # Specify the version of Portainer local machine
-    container_name: portainer
-    ports:
-      - "8000:8000"  # Portainer Edge Agent API on HTTP
-      - "9443:9443"  # Portainer UI on HTTPS
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock  # Allows Portainer to manage Docker
-      - portainer_data:/data  # Persist Portainer data
-    networks:
-      - inception  # Ensure it shares the same network as other services
-    restart: always
 volumes:
   wp-volume:
     driver_opts:
